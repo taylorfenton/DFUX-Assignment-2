@@ -226,6 +226,92 @@ iframe{
     font-weight: bold;
 }
 
+/* --- Contact Form Styles --- */
+
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: left; /* Keeps form labels left-aligned */
+}
+
+.repair-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* For putting two inputs side-by-side */
+.form-group-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group-row .form-group {
+    flex: 1;
+}
+
+.repair-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.repair-form input, 
+.repair-form select, 
+.repair-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: #fcfcfc;
+}
+
+.repair-form input:focus, 
+.repair-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(226, 91, 70, 0.2);
+}
+
+.submit-btn {
+    background: var(--accent);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #c04a37; /* Slightly darker orange on hover */
+}
+
+/* Mobile Fix for the side-by-side inputs */
+@media (max-width: 600px) {
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .contact-container {
+        padding: 20px;
+    }
+}
+
 /* responsive */      
 @media (min-width:900px){
   .header-contacts .contact-item{display:block;}
