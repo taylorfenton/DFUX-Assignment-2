@@ -103,7 +103,22 @@ body{
   padding:28px 16px;
   min-height:200px;
   flex-grow: 1;
+  text-align: center;
 }
+
+.content ul {
+    display: inline-block; 
+    text-align: left;      
+    margin: 0 auto;        
+}
+
+.repair-img {
+    display: block;         
+    max-width: 100%;        
+    height: auto;
+    border-radius: 8px;    
+}
+
 .footer{
   background:#222;
   color:#f1f1f1;
@@ -111,7 +126,107 @@ body{
   text-align:center;
 }
 
-/* responsive */        /* Used to be readable on mobile, not just on desktops */
+.flex-container {
+    display: flex;          
+    align-items: center;    
+    justify-content: center;
+    gap: 40px;              
+    max-width: 1000px;      
+    margin: 0 auto;         
+    text-align: left;       
+}
+
+.text-side {
+    flex: 1;                
+}
+
+.image-capsule {
+    flex: 1;                
+    max-width: 450px;
+    border: 1px; 
+    margin: 40px auto;
+    padding: 5px; 
+}
+
+iframe{
+    width: 80%;
+}
+
+.intro-section {
+    margin-bottom: 40px;
+    color: #080808;
+    text-align: center;
+}
+
+.issues-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.issue-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--accent); /* Adds a nice branded bottom border */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.issue-card:hover {
+    transform: translateY(-5px); /* Card lifts up when hovered */
+}
+
+.issue-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.issue-card h3 {
+    margin: 10px 0;
+    color: var(--dark);
+}
+
+.issue-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.lab-fix {
+    display: block;
+    font-weight: bold;
+    color: var(--accent);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-section {
+    margin-top: 50px;
+    padding: 40px;
+    background: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* A quick button style */
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* responsive */      
 @media (min-width:900px){
   .header-contacts .contact-item{display:block;}
   .main-nav ul{justify-content:flex-start;}
