@@ -1,0 +1,125 @@
+:root{
+  --dark:#0b0b0b;
+  --nav:#0f0f0f;
+  --accent:#e25b46;
+  --muted:#9ea3a3;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:#eee;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* header top area */
+.site-header{background:linear-gradient(#080808,#151515); color:#fff;}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1200px;
+  margin:0 auto;
+  padding:28px 16px;
+}
+
+/* brand / logo */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand .logo{
+  display:block;
+  width:auto;
+  height:48px;         /* match default text height */
+  object-fit:contain;
+}
+.brand .logo-text{
+  font-size:48px;
+  letter-spacing:8px;
+  font-weight:300;
+  line-height:1;
+  color:#fff;
+}
+.brand .logo-text .sub{
+  display:block;
+  font-size:12px;
+  letter-spacing:4px;
+  color:var(--muted);
+  margin-top:8px;
+}
+
+/* contacts on right */
+.header-contacts{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+.header-contacts .contact-item{display:none;} /* hide text on small screens */
+
+
+/* navigation bar */
+.main-nav{
+  background:var(--nav);
+  border-top:4px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35) inset;
+}
+.main-nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:12px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:10px 16px;
+}
+.main-nav a{
+  display:block;
+  padding:12px 18px;
+  color:#cfd6d6;
+  text-decoration:none;
+  border-radius:4px;
+  transition:background .15s,color .15s;
+}
+.main-nav a:hover{background:rgba(255,255,255,0.03); color:#fff;}
+.main-nav a.active{
+  background:var(--accent);
+  color:#fff;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.25);
+}
+
+/* content & footer */
+.content{
+  background:#ddd;
+  color:#222;
+  padding:28px 16px;
+  min-height:200px;
+  flex-grow: 1;
+}
+.footer{
+  background:#222;
+  color:#f1f1f1;
+  padding:14px 16px;
+  text-align:center;
+}
+
+/* responsive */        /* Used to be readable on mobile, not just on desktops */
+@media (min-width:900px){
+  .header-contacts .contact-item{display:block;}
+  .main-nav ul{justify-content:flex-start;}
+  .brand .logo-text{font-size:64px;}
+  .brand .logo{height:64px;} /* larger on wide screens */
+}
+@media (max-width:640px){
+  .brand .logo-text{font-size:28px; letter-spacing:4px;}
+  .main-nav ul{flex-wrap:wrap; gap:6px}
+  .header-inner{padding:18px 12px}
+}
