@@ -10,6 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $help           = htmlspecialchars($_POST['help'] ?? 'N/A');
     $contact_method = htmlspecialchars($_POST['contact-method'] ?? 'N/A');
 
+    //Hard to comment since it's mostly just echoing the data back in a formatted way, but I added some basic styling to make it look nicer.
+
     echo "<!DOCTYPE html>
     <html lang='en'>
     <head>
