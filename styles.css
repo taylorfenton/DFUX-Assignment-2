@@ -1,3 +1,5 @@
+/* GLOBAL STYLES & VARIABLES */
+
 :root{
   --dark:#0b0b0b;
   --nav:#0f0f0f;
@@ -5,7 +7,9 @@
   --muted:#9ea3a3;
 }
 
+/* Box sizing reset for consistent element sizing */
 *{box-sizing:border-box}
+
 body{
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
@@ -13,11 +17,14 @@ body{
   color:#eee;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the body spans the full viewport height */
 }
 
-/* header top area */
+/* HEADER SECTION */
+
+/* Top header background with gradient */
 .site-header{background:linear-gradient(#080808,#151515); color:#fff;}
+
 .header-inner{
   display:flex;
   align-items:center;
@@ -27,7 +34,7 @@ body{
   padding:28px 16px;
 }
 
-/* brand / logo */
+/* Logo and Branding styles */
 .brand{
   display:flex;
   align-items:center;
@@ -54,7 +61,7 @@ body{
   margin-top:8px;
 }
 
-/* contacts on right */
+/* Header contact links on the right */
 .header-contacts{
   display:flex;
   align-items:center;
@@ -65,7 +72,8 @@ body{
 .header-contacts .contact-item{display:none;} /* hide text on small screens */
 
 
-/* navigation bar */
+/* NAVIGATION BAR */
+
 .main-nav{
   background:var(--nav);
   border-top:4px solid rgba(255,255,255,0.03);
@@ -90,22 +98,26 @@ body{
   transition:background .15s,color .15s;
 }
 .main-nav a:hover{background:rgba(255,255,255,0.03); color:#fff;}
+
+/* Style for the current/active page link */
 .main-nav a.active{
   background:var(--accent);
   color:#fff;
   box-shadow: 0 3px 0 rgba(0,0,0,0.25);
 }
 
-/* content & footer */
+/* MAIN CONTENT AREA */
+
 .content{
   background:#ddd;
   color:#222;
   padding:28px 16px;
   min-height:200px;
-  flex-grow: 1;
+  flex-grow: 1; /* Allows content to expand and fill available space */
   text-align: center;
 }
 
+/* Centers lists within the content area while keeping text left-aligned */
 .content ul {
     display: inline-block; 
     text-align: left;      
@@ -119,6 +131,8 @@ body{
     border-radius: 8px;    
 }
 
+/* FOOTER SECTION */
+
 .footer{
   background:#222;
   color:#f1f1f1;
@@ -126,6 +140,9 @@ body{
   text-align:center;
 }
 
+/* FLEX & GRID LAYOUTS */
+
+/* Container for side-by-side text and images */
 .flex-container {
     display: flex;          
     align-items: center;    
@@ -158,6 +175,7 @@ iframe{
     text-align: center;
 }
 
+/* Services/Issues grid using CSS Grid Auto-fit */
 .issues-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,18 +185,19 @@ iframe{
     padding: 20px;
 }
 
+/* Individual issue card styling */
 .issue-card {
     background: #fff;
     padding: 30px;
     border-radius: 12px;
-    border-bottom: 4px solid var(--accent); /* Adds a nice branded bottom border */
+    border-bottom: 4px solid var(--accent); /* Visual brand accent */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.2s ease;
     text-align: center;
 }
 
 .issue-card:hover {
-    transform: translateY(-5px); /* Card lifts up when hovered */
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
 .issue-icon {
@@ -207,6 +226,8 @@ iframe{
     letter-spacing: 1px;
 }
 
+/* CALL TO ACTION & BUTTONS */
+
 .cta-section {
     margin-top: 50px;
     padding: 40px;
@@ -214,7 +235,6 @@ iframe{
     border-radius: 8px;
 }
 
-/* A quick button style */
 .btn-primary {
     background: var(--accent);
     color: #fff;
@@ -226,7 +246,7 @@ iframe{
     font-weight: bold;
 }
 
-/* --- Contact Form Styles --- */
+/* CONTACT FORM STYLES */
 
 .contact-container {
     max-width: 700px;
@@ -235,7 +255,7 @@ iframe{
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    text-align: left; /* Keeps form labels left-aligned */
+    text-align: left;
 }
 
 .repair-form {
@@ -246,7 +266,7 @@ iframe{
     margin-bottom: 20px;
 }
 
-/* For putting two inputs side-by-side */
+/* Side-by-side input container */
 .form-group-row {
     display: flex;
     gap: 20px;
@@ -298,10 +318,12 @@ iframe{
 }
 
 .submit-btn:hover {
-    background: #c04a37; /* Slightly darker orange on hover */
+    background: #c04a37;
 }
 
-/* Mobile Fix for the side-by-side inputs */
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Form fix: Stack side-by-side inputs on mobile */
 @media (max-width: 600px) {
     .form-group-row {
         flex-direction: column;
@@ -312,13 +334,15 @@ iframe{
     }
 }
 
-/* responsive */      
+/* Desktop styles for larger screens */
 @media (min-width:900px){
   .header-contacts .contact-item{display:block;}
   .main-nav ul{justify-content:flex-start;}
   .brand .logo-text{font-size:64px;}
-  .brand .logo{height:64px;} /* larger on wide screens */
+  .brand .logo{height:64px;} 
 }
+
+/* Mobile adjustments for header and navigation */
 @media (max-width:640px){
   .brand .logo-text{font-size:28px; letter-spacing:4px;}
   .main-nav ul{flex-wrap:wrap; gap:6px}
