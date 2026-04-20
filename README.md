@@ -2,6 +2,9 @@
 
 This assignments objective is to revise the previous wireframe and produce a prototype fitting it.
 
+**Website Link:** (https://taylorfenton.github.io/DFUX-Assignment-2/)
+Form however doesn't deploy as it's only made to work with localhost.
+
 
 ## Aims
 
@@ -74,7 +77,8 @@ Both resulted in a pass with no errors.
 
 ### Google Lighthouse results:
 
-DISLCAIMER: For some reason I couldn't get the performance tab to work with google lighthouse, however the other catagories I managed to gather.
+**Performance:**
+<img src ="/images/lighthousePerformance.png" alt = "Results for google lighthouse performance"><br>
 
 **Accessibility:**
 <img src ="/images/lighthouseAccessibility.png" alt = "Results for google lighthouse accessability"><br>
