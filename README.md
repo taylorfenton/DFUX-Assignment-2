@@ -27,12 +27,17 @@ feedback to resolve identified issues.
 - Media Queries: I wanted to make sure the webpage would adapt to whatever size device it was being accessed on, luckily media quieries solves this problem. We can define tablets from computers by the size of thier screen, then format the site a different way. This explains it better: [W3Schools](https://www.w3schools.com/css/css_rwd_mediaqueries.asp).
 
 - Navigation Bar: Most websites nowadays use a navigation bar at the top part of the screen. I decided to do the same. This stays consistent at the top of the screen, helping users navigate easily between pages. It also highlights what page you're currently on, reducing the amount of users lost.
+  <img src ="/images/navBarHome.png" alt = "Navigation bar for website of home page"><br>
+  <img src ="/images/navBarCommonIssues.png" alt = "Navigation bar for website of common issues page"><br>
 
 - FlexBox: The Flex type can be used to make things attached to it (mainly containers) adapt to the screens size, in conjuctiuon with max size settings, this can very useful in formatting. This was also used to make a sticky footer, that automatically expands as the website grows.
+  <img src ="/images/flexCommonIssues.png" alt = "Showcase of flexbox grid of website"><br>
 
 - Google Maps: Using the Iframe type, this allows data from foregn website to appear on home website. Using google maps, we can then go to any location listed, grab a specific url and use that to get a fully interactive map working in a little amount of effort.
+  <img src ="/images/findUsMap.png" alt = "Google maps working on website"><br>
 
 - PHP Form: This form collects all the data input from the 'Contact Us' page, and mimics it being sent away and recived by the fictional repair company. This will only work if a local host server is running within the folder however.
+  <img src ="/images/contactUsForm.png" alt = "Contact us form for website"><br>
 
 ### Challenges
 
